@@ -1,0 +1,36 @@
+<div class="acticle-edit">
+    <h4>我的评论</h4>
+    <div class="article-title">
+        <table class="table">
+            <tr>
+                <th>标题</th>
+                <th>作者</th>
+                <th>日期</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+            <tr ng-repeat="comment in comments">
+                <td>
+                    {{comment.title}}
+                </td>
+                <td>
+                    {{comment.author}}
+                </td>
+                <td>
+                    {{comment.date}}
+                </td>
+                <td>
+                    <a>编辑</a>
+                </td>
+                <td>
+                    <a>删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    {{article.content}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

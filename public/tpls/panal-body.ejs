@@ -1,0 +1,16 @@
+<div ng-repeat="article in articles" class="panal-body">
+    <div class="panal-category">
+        <span>{{article.label1}}</span>,<span>{{article.label2}}</span>,<span>{{article.label3}}</span>,<span>html5</span>
+    </div>
+    <div class="panal-title">{{article.title}}</div>
+    <div class="panal-meta">
+        By:<span>{{article.author}}</span>|<i class="fa fa-commenting"></i><span>{{article.times}}</span>
+    </div>
+    <div class="panal-content">
+        <p>
+            {{article.content}}
+        </p>
+        <a class="read-more" ui-sref="detail">More...</a>
+    </div>
+    <div class="panal-date">{{article.date}}</div>
+</div>

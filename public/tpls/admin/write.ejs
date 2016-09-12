@@ -1,0 +1,27 @@
+<div class="acticle-edit">
+    <h4>添加新文章</h4>
+    <div class="article-title">
+        <label for="arc-title">标题</label>
+        <input id="arc-title" name="title" ng-model="blog.title" class="form-control">
+    </div>
+        <textarea name="content" ng-model="content " cols="100" id="edit-main" class="form-control" rows="300" autofocus>
+
+        </textarea>
+    <div class="edit-category">
+        <h4>个人分类</h4>
+        <div class="check-category">
+            <input type="checkbox" value="html" id="check-html"><label for="check-html">html</label>
+            <input type="checkbox" value="html" id="check-css"><label for="check-html">css</label>
+            <input type="checkbox" value="html" id="check-js"><label for="check-html">js</label>
+        </div>
+        <h4>标签</h4>
+        <div class="check-category">
+            <input type="checkbox" value="html" id="label-html"><label for="label-html">html</label>
+            <input type="checkbox" value="html" id="label-css"><label for="label-html">css</label>
+            <input type="checkbox" value="html" id="label-js"><label for="label-html">js</label>
+            <span>添加</span>
+        </div>
+    </div>
+    <div class="publish"><button type="submit" class="btn btn-primary">发布</button><a class="btn btn-primary">存为草稿</a><a class="btn btn-default">取消</a></div>
+
+</div>

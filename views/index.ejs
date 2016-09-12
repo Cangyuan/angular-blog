@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%-title%></title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Font-Awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/public.css">
+    <link rel="stylesheet" href="/css/blog-home.css">
+
+    <script src="/js/jquery-1.11.2.min.js"></script>
+    <script src="/angularJS/angular.min.js"></script>
+    <script src="/angularJS/ui-route.js"></script>
+  </head>
+  <body ng-app="myApp" ng-controller="myController">
+    <!-- header start-->
+    <header-top>
+        <ul>
+          <li><a ng-click="navChange(1)" ng-class="{'navActive':win==1}" ui-sref="home">首页</a></li>
+          <li><a ng-click="navChange(2)" ng-class="{'navActive':win==2}" ui-sref="skill">前端技术</a></li>
+          <li><a ng-click="navChange(3)" ng-class="{'navActive':win==3}" ui-sref="frame">前端框架</a></li>
+          <li><a ng-click="navChange(4)" ng-class="{'navActive':win==4}" ui-sref="contact">关于我</a></li>
+        </ul>
+    </header-top>
+
+    <!-- header end-->
+    <div id="blog-main" ui-view></div>
+    <footer>
+
+    </footer>
+    <!--<script src="js/canvas.js"></script>-->
+    <script>
+      var app=angular.module('myApp', ['ui.router','blog_directive']);
+      app.config(function($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise("home");
+        $stateProvider
+                .state('home', {
+                  url:"/home",
+                  cache:'false',
+                  templateUrl: "tpls/home.ejs",
+                  controller: function($scope) {
+                    $scope.win=1;
+                    $scope.articles=[
+                      {
+                        "author":"沧苑",
+                        "times":"2",
+                        "title":"使用Yeoman和Polymer创建Web应用",
+                        "content":"Allo’Allo’。method都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02",
+                        "label1":"js",
+                        "label2":"css",
+                        "label3":"html5",
+
+                      },
+                      {
+                        "author":"沧苑",
+                        "times":"2",
+                        "title":"使用Yeoman和Polymer创建Web应用",
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods. fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02",
+                        "label1":"js",
+                        "label2":"css",
+                        "label3":"html5",
+
+                      },
+                      {
+                        "author":"沧苑",
+                        "times":"2",
+                        "title":"使用Yeoman和Polymer创建Web应用",
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02",
+                        "label1":"js",
+                        "label2":"css",
+                        "label3":"html5",
+
+                      }
+                    ]
+                  }
+
+                })
+                .state('skill', {
+                  url:"/skill",
+                  templateUrl: 'tpls/skill.ejs',
+                  controller: function($scope) {
+                    $scope.win=2;
+                    $scope.articles=[
+                      {
+                        "author":"沧苑",
+                        "times":"2",
+                        "title":"使用Yeoman和Polymer创建Web应用",
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02",
+                        "label1":"js",
+                        "label2":"css",
+                        "label3":"html5",
+
+                      },
+                      {
+                        "author":"沧苑",
+                        "times":"2",
+                        "title":"使用Yeoman和Polymer创建Web应用",
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02",
+                        "label1":"js",
+                        "label2":"css",
+                        "label3":"html5",
+
+                      },
+                      {
+                        "author":"沧苑",
+                        "times":"2",
+                        "title":"使用Yeoman和Polymer创建Web应用",
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02",
+                        "label1":"js",
+                        "label2":"css",
+                        "label3":"html5",
+
+                      }
+                    ]
+
+                  }
+                })
+                .state('frame', {
+                  url:"/frame",
+                  templateUrl: 'tpls/frame.ejs',
+                  controller: function($scope) {
+
+                    $scope.articles=[
+                      {
+                        "author":"沧苑",
+                        "times":"2",
+                        "title":"使用Yeoman和Polymer创建Web应用",
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02",
+                        "label1":"js",
+                        "label2":"css",
+                        "label3":"html5",
+
+                      },
+                      {
+                        "author":"沧苑",
+                        "times":"2",
+                        "title":"使用Yeoman和Polymer创建Web应用",
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02",
+                        "label1":"js",
+                        "label2":"css",
+                        "label3":"html5",
+
+                      },
+                      {
+                        "author":"沧苑",
+                        "times":"2",
+                        "title":"使用Yeoman和Polymer创建Web应用",
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02",
+                        "label1":"js",
+                        "label2":"css",
+                        "label3":"html5",
+
+                      }
+                    ]
+
+
+                  }
+                })
+                .state('login', {
+                  url:"/login",
+                  templateUrl: 'login.ejs',
+                  controller: function($scope) {
+
+                      $scope.win=4;
+
+                    $scope.comments=[
+                      {
+                        "author":"沧苑",
+                        "img":"imgs/logo.jpg",
+                        /*"title":"使用Yeoman和Polymer创建Web应用",*/
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02"
+                      },
+                      {
+                        "author":"沧苑",
+                        "img":"imgs/logo.jpg",
+                        /*"title":"使用Yeoman和Polymer创建Web应用",*/
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02"
+                      },
+                      {
+                        "author":"沧苑",
+                        "img":"imgs/logo.jpg",
+                        /*"title":"使用Yeoman和Polymer创建Web应用",*/
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02"
+                      }
+                    ]
+
+                  }
+                })
+                .state('contact', {
+                  url:"/contact",
+                  templateUrl: 'tpls/contact.ejs',
+                  controller: function($scope) {
+                    $scope.win=4;
+                    $scope.comments=[
+                      {
+                        "author":"沧苑",
+                        "img":"imgs/logo.jpg",
+                        /*"title":"使用Yeoman和Polymer创建Web应用",*/
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02"
+                      },
+                      {
+                        "author":"沧苑",
+                        "img":"imgs/logo.jpg",
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02"
+                      },
+                      {
+                        "author":"沧苑",
+                        "img":"imgs/logo.jpg",
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02"
+                      }
+                    ]
+
+                  }
+                })
+                .state('detail', {
+                  url:"/detail",
+                  templateUrl: 'tpls/detail.ejs',
+                  controller: function($scope) {
+                    $scope.comments=[
+                      {
+                        "author":"沧苑",
+                        "img":"imgs/logo.jpg",
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02"
+                      },
+                      {
+                        "author":"沧苑",
+                        "img":"imgs/logo.jpg",
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02"
+                      },
+                      {
+                        "author":"沧苑",
+                        "img":"imgs/logo.jpg",
+                        "content":"Allo’Allo’。大多数人都很MongoBooster supports mongoose-like fluent query builder api. A Query enables you to build up a query using chaining syntax, rather than specifying a JSON object. The aggregation framework is now fluent as well. You can use it as currently documented or via the chainable methods.你进行某些乏味的项目开发时，你会因为各种令你头痛的事情而感到焦虑、烦躁，比如寻找项目模板、配置项目基础架构、开发环境、测试环境以及后续的项目优化和压缩。这种枯燥乏味如流水线般的事情，偶尔一次还好，但如果周而复始的进行类似的项目，你的脑袋不会炸掉才怪！",
+                        "date":"2014-07-02"
+                      }
+                    ]
+
+                  }
+                })
+      });
+      app.controller('myController',function($scope){
+        $scope.win=1;
+
+        var location=window.location.toString();
+        //alert(location.indexOf("home")!=-1);
+          //var hashStr = location.hash.replace("#","");
+          if(location.indexOf("home")!=-1){
+            $scope.win=1;
+          }
+          if(location.indexOf("skill")!=-1){
+            $scope.win=2;
+          }
+          if(location.indexOf("frame")!=-1){
+            $scope.win=3;
+          }
+        if(location.indexOf("contact")!=-1){
+          $scope.win=4;
+        }
+        //alert($scope.win);
+        $scope.navChange=function(index){
+          $scope.win=index;
+         // alert($scope.win)
+        }
+      })
+    </script>
+  <script src="js/directive.js"></script>
+  </body>
+</html>

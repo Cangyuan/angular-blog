@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-size: 16px;
+    background: #DFF0F8;
+    min-width:1200px;
+    font-family: Tahoma, Arial, Helvetica, 'Microsoft YaHei New', 'Microsoft Yahei', 微软雅黑, 宋体, SimSun, STXihei, 华文细黑, sans-serif;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:visited {
+    text-decoration: none;
+    outline: none;
+}
+
+.btn-next,.btn-check,.btn-prev{
+	background: #f00;
+	color:#fff;
+}
+.btn-next>a,.btn-prev>a,.btn-commit>a,.btn-success>a{
+	color:#fff;
+}
+
+#my_header{
+    width: 100%;
+    height: 148px;
+    background: url(../imgs/headerTop.png) no-repeat left top;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+
+
+/*选择情形页面开始的头部代码*/
+
+/*.defHeader {
+    width: 100%;
+    height: 80px;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    background: -moz-linear-gradient(left, #1F6AC5 0%, #ffffff 100%);
+   !* background: -webkit-gradient(linear, left, right, color-stop(0%, #1F6AC5), color-stop(100%, #ffffff));*!
+    background: -webkit-linear-gradient(left, #1F6AC5 0%, #ffffff 100%);
+    background: -o-linear-gradient(left, #1F6AC5 0%, #ffffff 100%);
+    background: -ms-linear-gradient(left, #1F6AC5 0%, #ffffff 100%);
+    background: linear-gradient(to right, #1F6AC5 0%, #ffffff 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1F6AC5', endColorstr='#ffffff', GradientType=0);
+}*/
+
+.location {
+    color: #fff;
+    float: left;
+}
+
+.location a {
+    color: #fff;
+}
+
+.location .fa {
+    color: #fff;
+}
+
+.fa-angle-double-right {
+    padding: 0 10px;
+}
+
+.currentL {
+    color: #000;
+}
+
+.user {
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
+}
+
+.userName {
+    padding-right: 10px;
+    border-right: 2px solid #000;
+}
+
+.loginOut {
+    padding-left: 10px;
+}
+
+.main {
+    width: 94%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-top:20px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+/*导航条代码*/
+
+.mynavbar {
+    width: 84%;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.progress {
+    height: 94px;
+    padding-top: 40px;
+    background: none;
+    border-radius: 0;
+    webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: none;
+    overflow: visible;
+}
+.longItem{
+	width: 120px !important;
+	left:-30px !important;
+}
+.progress-bar {
+    height: 30%;
+}
+
+.step-bar {
+    position: relative;
+}
+
+.ui-step-cont {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -13px;
+    left: -13px;
+    background: none;
+}
+
+.ui-step-cont-number {
+    overflow: hidden;
+    display: inline-block;
+    *zoom: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 46px;
+    color: #fff;
+    background: #262626;
+    border-radius: 50%;
+    border: 2px solid #323232;
+    font-family: tahoma;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: inset 0 0 1px #e5e5e5;
+    text-align: center;
+}
+
+.progress-gray {
+    background: #323232;
+    box-shadow: inset 0 0 2px #e5e5e5;
+    border: 2px solid #323232;
+    /* margin-top: 4px; */
+}
+
+.progress-bar-striped {
+    box-shadow: inset 0 0 2px #7c7c7d;
+    border: 2px solid #323232;
+    background-color: #5cb85c;
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+}
+
+.step_active {
+    background: #62ac62;
+}
+
+.font_active {
+    color: #62ac62;
+}
+
+.ui-step-cont-text {
+    display: inline-block;
+    width: 80px;
+    position: relative;
+    top: 64px;
+    left: -16px;
+    font-size: 18px;
+    color: #323232;
+    letter-spacing: 2px;
+    text-shadow: 2px 0 6px #e5e5e5;
+}
+
+.font_active {
+    color: #62ac62;
+}
+/* ------------------------------------------- */
+
+
+#ow_header{
+	background: #000;
+	height: 148px;
+	color:#fff;
+}
+#ow_header a{
+	color:#fff;
+	font-size: 16px;
+}
+#ow_header span{
+	font-size: 24px;
+}
+

@@ -1,0 +1,135 @@
+<style>
+    .categories {
+        border-radius: 10%;
+        box-shadow: inset 0 0 6px #fff;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #00dba8;
+        overflow: hidden;
+        font-family: 'Rubik Mono One', sans-serif;
+        padding-bottom: 30px;
+    }
+    .categories h4{
+        color: #fffcee;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 2px;;
+        text-shadow: 4px 3px 0px rgba(255,255,255,0.15),7px 6px 0px rgba(255,255,255,0.15);
+    }
+    .words {
+        color: #00dba8;
+        font-size: 0;
+        line-height: 1;
+    }
+    .words span {
+        font-size: 24px;
+        line-height: 1.4;
+        display: inline-block;
+        animation: move 2s ease-in-out infinite;
+    }
+    .words span:nth-child(2) {
+        animation-delay: 0.4s;
+    }
+    .words span:nth-child(3) {
+        animation-delay: 0.8s;
+    }
+    .words span:nth-child(4) {
+        animation-delay: 1.3s;
+    }
+
+    @keyframes move {
+        0% {
+            transform: translate(-25%, 0);
+        }
+        50% {
+            text-shadow: 0 15px 40px rgba(0, 0, 0,1);
+        }
+        100% {
+            transform: translate(33%, 0);
+        }
+    }
+</style>
+<form>
+    <div class="form-group">
+        <label for="search"></label>
+        <input type="search" class="form-control" id="search" placeholder="搜索">
+    </div>
+</form>
+<div class="about-info-top">
+    <h4>关于沧苑</h4>
+    <p><img src="imgs/logo.jpg"></p>
+    <div class="text-info">
+        <p>
+            来自天津的前端开发工程师，自2015年步入前端开发领域，对其热爱便一发不可收拾，未来还将继续热爱下去。崇尚优雅、简洁且易懂的编码风格。目前就职于异乡好居，负责PC站前端业务。
+        </p>
+        <p>了解更多：<a href="/about">个人网站</a></p>
+    </div>
+    <div class="categories">
+        <h4>分类</h4>
+        <div class="words words-1">
+            <span>前端技术</span>
+            <span>css</span>
+            <span>html</span>
+            <span>js</span>
+        </div>
+        <div class="words words-1">
+            <span>前端框架</span>
+            <span>angularJS</span>
+            <span>bootstrap</span>
+            <span>jqurey</span>
+
+        </div>
+        <div class="words words-1">
+            <span>前端技术</span>
+            <span>HTNML5</span>
+            <span>CSS3</span>
+            <span>nodeJS</span>
+            <span>其他</span>
+        </div>
+        <!--<ul class="category-wrap">-->
+            <!--<li>-->
+                <!--<a>前端技术</a>-->
+                <!--<ul>-->
+                    <!--<li><a>css</a></li>-->
+                    <!--<li><a>html</a></li>-->
+                    <!--<li><a>js</a></li>-->
+                <!--</ul>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a>前端框架</a>-->
+                <!--<ul>-->
+                    <!--<li><a>css</a></li>-->
+                    <!--<li><a>html</a></li>-->
+                    <!--<li><a>js</a></li>-->
+                <!--</ul>-->
+            <!--</li>-->
+            <!--<li><a>其他</a></li>-->
+        <!--</ul>-->
+    </div>
+    <div class="news">
+        <h4>最新</h4>
+        <ul>
+            <li><a>来自天津的前端开发工程师，自2015年步入前端开发领域，</a></li>
+            <li><a>来自天津的前端开发工程师，自2015年步入前端开发领域，</a></li>
+            <li><a>来自天津的前端开发工程师，自2015年步入前端开发领域，</a></li>
+            <li><a>来自天津的前端开发工程师，自2015年步入前端开发领域，</a></li>
+        </ul>
+    </div>
+    <div class="labels">
+        <h4>标签</h4>
+        <div class="label-wrap">
+            <a>blog</a>
+            <a>css3</a>
+            <a>云服务</a>
+            <a>杂坛</a>
+            <a>blog</a>
+            <a>blog</a>
+
+
+        </div>
+    </div>
+</div>

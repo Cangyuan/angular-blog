@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>身份证注册</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="Font-Awesome/css/font-awesome.min.css">
+	<script src="angularJS/angular.min.js"></script>
+	<script src="js/directive.js"></script>
+	<!--<script src="angularJS/ui-route.js"></script>-->
+	<style>
+	.shenfenzhengPic{
+		width: 445px;
+		height: 336px;
+		margin:0 auto;
+		display: block;
+	}
+	.jiantouPic{
+		width: 50px;
+		height: 60px;
+		position: absolute;
+		top: 6px;
+		right: 80px;
+	}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="regCtr">
+<header-top></header-top>
+	<div class="main-middle ">
+		<div class="tittle-top">
+			注册
+		</div>
+		<form method="post" class="form-horizontal">
+			<div class="form-group">
+				<label for="username" class="col-sm-3 control-label">用户名：</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" ng-model="user.username" name="username" id="username">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password" class="col-sm-3 control-label">密 码：</label>
+				<div class="col-sm-5">
+					<input type="password" class="form-control" ng-model="user.password" name="password" id="password" placeholder="请输入密码">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-10">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> 记住我
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group submitBtn">
+				<div class="col-sm-offset-3 col-sm-10">
+					<button type="submit" ng-click="reg()" class="btn btn-success col-sm-4">注&nbsp;&nbsp;&nbsp;册</button><a href="/login">登录</a><a href="/password-back">？忘记密码</a>
+				</div>
+			</div>
+		</form>
+
+		</div>
+	</div>
+	<script src="js/reg.js"></script>
+</body>
+</html>

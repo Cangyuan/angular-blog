@@ -1,0 +1,235 @@
+/*basic start*/
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #f2f2f2;
+  font-family: "微软雅黑";
+}
+a{
+  color:#00b38a;
+}
+a:hover,a:visited,a:focus{
+  text-decoration: none;
+  outline: none;
+}
+ul,ol,li{
+  list-style: none;
+}
+/*basic end*/
+#blog-main{
+  width: 92%;
+  margin: 46px auto auto;
+  min-height:500px;
+}
+/*header start*/
+header{
+  background: #121212;
+  overflow: hidden;
+  height:160px;
+  position:relative;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes chill {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+canvas p {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  color: white;
+  opacity: 0;
+  font-family: "Source Sans Pro";
+  animation: fadeIn 2s ease-out, chill 2s 2s, fadeOut 2s 4s;
+}
+
+.social:hover a {
+  transform: rotate(-45deg) scale(1.05);
+}
+.social:hover i {
+  color: #21c2ff;
+}
+
+canvas a {
+  position: absolute;
+  bottom: -40px;
+  right: -75px;
+  background: white;
+  color: white;
+  box-shadow: -1px -1px 20px 0px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  width: 150px;
+  height: 80px;
+  transform-origin: 50% 50%;
+  transform: rotate(-45deg);
+  transition: .15s ease-out;
+}
+
+canvas i {
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  pointer-events: none;
+  color: #00ACED;
+  z-index: 1000;
+  font-size: 100px;
+  transition: .15s ease-out;
+}
+.hearder-main{
+  position: absolute;
+  top:20px;
+  left:0
+}
+.hearder-main section{
+  width: 30%;
+}
+.hearder-main nav{
+  width:70%;
+  margin-top:4%;
+}
+.hearder-main nav ul{
+  display:-webkit-flex;
+  display:flex;
+  box-orient: horizontal;
+}
+.hearder-main nav ul li{
+  width:25%;
+  text-align: center;
+  font-size:18px;
+}
+header nav ul li a{
+  color:#a6a6a6;
+  position:relative;
+  text-align: center;
+}
+header nav ul li a:hover{
+  color:#fff;
+}
+header nav ul li a:before{
+  content:'';
+  position:absolute;
+  display: block;
+  width: 7px;
+  height:7px;
+  left: 0;
+  right:0;
+  bottom:-15px;
+  border-radius: 50%;
+  background: #a6a6a6;
+  margin:auto;
+}
+header nav ul li:nth-of-type(1)>a:before{
+  background: #ff6666;
+}
+.hearder-main nav ul li:nth-of-type(2)>a:before{
+  background: #4eff46;
+}
+.hearder-main nav ul li:nth-of-type(3)>a:before{
+  background: #ff57fe;
+}
+.hearder-main nav ul li:nth-of-type(4)>a:before{
+  background: #4cc3ff;
+}
+.navActive{
+  color:#fff!important;
+}
+.navActive:after{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right:0;
+  margin:auto;
+  bottom:-74px;
+  width:4px;
+  height:50px;
+  background: #fff;
+}
+
+/*文字阴影 start*/
+
+.foo {
+  font-family:  "Arial Black" ;
+  text-shadow: 4px 3px 0px rgba(255,255,255,0.15),9px 8px 0px rgba(255,255,255,0.15);
+  /*text-shadow: 1.66913px 1.74314px 0 #5988da, 2.33826px 2.48629px 5px #5988da, 4.33826px 4.48629px 6px #5988da,6.33826px 6.48629px 20px #5988da;*/
+}
+.foo {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  line-height: 20vh;
+  font-size: 6em;
+  text-align: left;
+  margin-top:-3vh;
+}
+.home-left{
+  width:70%;
+  position:relative;
+}
+.home-right{
+  width: 30%;
+  min-height: 300px;
+  padding-left:5%;
+}
+.about-info-top img{
+  display:block;
+  width: 120px;
+  height:120px;
+  border-radius: 50%;
+  margin:0 auto;
+}
+.text-info{
+  margin-top:16px;
+}
+.text-info p{
+  font-family: "微软雅黑";
+  color:#a6a6a6;
+  line-height:1.6;
+  text-indent: 32px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.main-middle{
+  padding: 2% 0 0 2%;
+  width: 60%;
+  margin:0 auto;
+  background: #fff;
+  margin-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px #dfe1e1;
+}
+.main-middle .tittle-top{
+  color: #444;
+  font-size: 20px;
+  /* font-weight: bold; */
+  letter-spacing: 3px;
+  text-indent: 4px;
+  position: relative;
+  border-left: 3px solid #00b38a;
+  margin-bottom: 2%;
+}
+.foo a{
+  color: #fff;
+}
+
+

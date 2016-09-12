@@ -1,0 +1,55 @@
+<div class="comments">
+    <h3>2 个评论</h3>
+    <div class="comment-wrap">
+        <h3>发表评论</h3>
+        <form method="post">
+            <p>
+                    <textarea class="textarea-write" rows="9"  name="comments" autofocus="true">
+
+                    </textarea>
+            </p>
+            <p class="com-input">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+            </p>
+            <p>
+                <input type="submit" value="发表评论" id="submit-pub">
+            </p>
+
+        </form>
+    </div>
+    <ul class="comment-list">
+        <li ng-repeat="comment in comments">
+            <div class="comment">
+                <div class="pull-left">
+                    <img src="{{comment.img}}">
+                </div>
+                <div class="comment-info">
+                    <div class="comment-auto">
+                        <div class="pull-left">
+                            <span>{{comment.author}}</span>-{{comment.date}}
+                        </div>
+                        <div class="pull-right">回复</div>
+                    </div>
+                    <p>{{comment.content}}</p>
+                </div>
+            </div>
+        </li>
+        <!--<li>
+            <div class="comment">
+                <div class="pull-left">
+                    <img src="imgs/logo.jpg">
+                </div>
+                <div class="pull-right comment-info">
+                    <div class="comment-auto">
+                        <div class="pull-left">
+                            <span>姓名</span>-2016-07-28
+                        </div>
+                        <div class="pull-right">回复</div>
+                    </div>
+                    <p>今晚还很傻的去面试了。。。不用考虑 直接拒绝，彬哥加油！</p>
+                </div>
+            </div>
+        </li>-->
+    </ul>
+</div>
